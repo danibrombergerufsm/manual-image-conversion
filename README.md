@@ -13,7 +13,8 @@ Ideal para estudos em **Google Colab** ou ambientes educacionais onde se deseja 
 ## ✨ Funcionalidades
 
 - ✅ Carrega imagem colorida (usando `PIL` apenas para I/O — permitido).
-- ✅ Converte para escala de cinza usando a **fórmula de luminância ITU-R BT.601**:
+- ✅ Converte para escala de cinza usando a **fórmula de luminância ITU-R BT.601**:  
+  `Y = 0.299 * R + 0.587 * G + 0.114 * B`
 - ✅ Binariza a imagem com limiar ajustável (`threshold`).
 - ✅ Exibe as três versões lado a lado (original, cinza, binária).
 - ✅ Código 100% transparente e didático.
@@ -23,23 +24,28 @@ Ideal para estudos em **Google Colab** ou ambientes educacionais onde se deseja 
 ## 🛠️ Requisitos
 
 - Python 3.x
-- Bibliotecas (apenas para carregar/salvar/visualizar):
-- `numpy`
-- `Pillow` (PIL)
-- `matplotlib`
+- Bibliotecas (usadas **apenas para carregar, salvar e visualizar**):
+  - `numpy`
+  - `Pillow` (PIL)
+  - `matplotlib`
 
 > 💡 **Observação**: As bibliotecas são usadas **somente para entrada, saída e visualização**. A **lógica de conversão é inteiramente manual**.
 
+---
+
 ## 📂 Estrutura do Código
-# 1. Carrega imagem (com PIL)
-# 2. Função manual: RGB → Cinza (pixel a pixel)
-# 3. Função manual: Cinza → Binarizada (com limiar)
-# 4. Visualização com matplotlib
+
+1. **Carrega imagem** (com `PIL`)
+2. **Função manual**: RGB → Escala de cinza (pixel a pixel)
+3. **Função manual**: Escala de cinza → Binarizada (com limiar)
+4. **Visualização** com `matplotlib`
+
 ---
 
 ## ▶️ Como usar (no Google Colab)
 
 1. Faça upload de uma imagem (ex: `minha_imagem.jpg`) no Colab.
 2. Substitua o caminho no código:
- ```python
- img = Image.open('/content/minha_imagem.jpg')
+
+```python
+img = Image.open('/content/minha_imagem.jpg')
