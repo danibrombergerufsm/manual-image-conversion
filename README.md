@@ -38,3 +38,9 @@ Ideal para estudos em **Google Colab** ou ambientes educacionais onde se deseja 
 2. Substitua o caminho no código:
  ```python
  img = Image.open('/content/minha_imagem.jpg')
+
+## 📂 **Estrutura do Código**
+# 1. Carrega imagem (com PIL)
+# 2. Função manual: RGB → Cinza (pixel a pixel)
+# 3. Função manual: Cinza → Binarizada (com limiar)
+# 4. Visualização com matplotlib
